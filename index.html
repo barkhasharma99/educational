@@ -24,13 +24,17 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <title>MyWeb</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
   </head>
   <body>
+    
     <div class="header">
-      <nav class="navbar navbar-expand fixed-top">
+      <nav class="navbar navbar-expand fixed-top" >
         <div class="container text-uppercase p-2">
           <a class="navbar-brand font-wheight-bold text-white" href="#"
-            >EducationWeb</a
+            >EducationHub</a
           >
           <button
             class="navbar-toggler"
@@ -49,16 +53,17 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Service</a>
+                <a class="nav-link" href="#servicediv">Service</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Price</a>
+      <div class="container" id="price">
+                <a class="nav-link" href="#price1">Price</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#newsletterid">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -70,8 +75,8 @@
           <h1 class="font-wheight-bold">WE ARE THE WEB DEVELOPER</h1>
           <p>we create the world best website.</p>
           <div class="header-buttons">
-            <a href="#">AboutUs</a>
-            <a href="#">Contact</a>
+            <a href="#newsletterid">AboutUs</a>
+            <a href="#contact">Contact</a>
           </div>
         </div>
       </section>
@@ -265,30 +270,32 @@
         </h1>
       </div>
 
-      <div class="container d-flex justify-content-around align-items-center">
-        <div>
-          <h1 class="count">500</h1>
-          <p>xyz</p>
-        </div>
-        <div>
-          <h1 class="count">200</h1>
-          <p>xyz</p>
-        </div>
-        <div>
-          <h1 class="count">300</h1>
-          <p>xyz</p>
-        </div>
-        <div>
-          <h1 class="count">700</h1>
-          <p>xyz</p>
-        </div>
+      <div class="container d-flex justify-content-around align-items-center p-5">
+
+          <div>
+            <h1  class="counter">123</h1>
+            <p>Barkha</p>
+          </div> 
+          <div>
+            <h1  class="counter">45</h1>
+            <p>Barkha</p>
+          </div><div>
+            <h1  class="counter">45</h1>
+            <p>Barkha</p>
+          </div><div>
+            <h1  class="counter">45</h1>
+            <p>Barkha</p>
+          </div><div>
+            <h1  class="counter">45</h1>
+            <p>Barkha</p>
+          </div>
       </div>
     </section>
 
     <!-- project done end -->
 
     <!-- our pricing strt -->
-    <section class="pricing" id="pricingdiv">
+    <section class="pricing" id="price1">
       <div class="container heading text-center">
         <h1 class="text-center font-wheight-bold text-white">
           OUR BEST PRICING
@@ -297,7 +304,7 @@
         <br />
       </div>
 
-      <div class="container">
+      <div class="container" id="price">
         <div class="row">
           <div class="col-lg-4 col-12">
             <div class="card text-center">
@@ -572,8 +579,8 @@
     <!-- cuntact us strt -->
  
     <section class="contactus" id="contact">
-      <div class="container heading text-center">
-        <h1 class="text-center font-wheight-bold  ">
+      <div class="container heading text-center ">
+        <h1 class="text-center font-wheight-bold   ">
           CONTACT US
         </h1>
         <p class="text-capitalize pt-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, necessitat</p>
@@ -587,28 +594,42 @@
             
             
             
-            <form action="/action_page.php">
+            <form action="/action_page.php  m-4">
               <div class="form-group">
                 
-                <input type="text" class="form-control"  id="username" required autocomplete="off">
+                <input type="text" class="form-control"  placeholder="Enter your Name" id="username" required autocomplete="off">
+                <br>
               </div>
               
 
               <form action="/action_page.php">
                 <div class="form-group">
-                  
-                  <input type="email" class="form-control"   id="useremail">
+                   <input type="email" class="form-control" placeholder="Enter your Email"  id="useremail">
+                   <br>
+
                 </div>
               
                 
                 <form action="/action_page.php">
                   <div class="form-group">
                      
-                    <input type="number" class="form-control"   id="mobile">
+                    <input type="number" class="form-control" placeholder="Enter your Mobile"  id="mobile">
+                    <br>
+
+                  </div>
+
+
+                  <div class="form-group">
+                    
+                    <textarea class="form-control" placeholder="Enter text here" rows="4" id="comment"></textarea>
+                    <br>
+
                   </div>
                   
                
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="justify-content-center form-button">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
             </form>
 
           </div>
@@ -619,29 +640,99 @@
     <!-- cuntact us END -->
 
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
-      integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
-      integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <!-- newsletter strt -->
+
+    <section class="newsletter" id="newsletterid">
+      <div class="container heading text-center">
+        <h1 class="text-center font-wheight-bold  p-4">
+     SUBSCRIBE OUR NEWSLETTER
+        </h1>
+       <div class="container">
+         <div class="row">
+           <div class="col-lg-8 offset-lg-2  col-12" >
+             
+              <div class="input-group mb-3">
+                <input type="text" class="form-control news-input" placeholder="Your Email">
+                <div class="input-group-append">
+                  <span class="input-group-text">Subscribe</span>
+                </div>
+              </div>
+           </div>
+         </div>
+       </div>
+        <br />
+        <br />
+      </div>
+      </section>
+
+
+    <!-- newsletter end -->
+
+    <!-- footer -->
+
+    <footer class="footersection" id="footerdiv">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12 footerdiv">
+          <div class="p-5">
+            <h3>About Education</h3>
+            <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, officiis.</p>
+
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 footer-div text-center  text-white">
+          <div class="p-5">
+            <h3>Navigation Links</h3>
+            <li><a href="#">home</a> </li>
+            <li> <a href="#">Service</a></li>
+              <li> <a href="#">Price</a></li>
+                <li><a href="#">About</a></li>
+           
+            
+
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12 footerdiv">
+          <div class="p-5">
+            <h3>News letter</h3>
+            <p  class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, officiis.</p>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12  col-12" >
+                  
+                   <div class="input-group mb-3">
+                     <input type="text" class="form-control news-input" placeholder="Your Email">
+                     <div class="input-group-append">
+                       <span class="input-group-text">Subscribe</span>
+                     </div>
+                   </div>
+                </div>
+              </div>
+             
+            </div>
+          
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <p  class="text-white">copyright All right reserved | this template is mde with love BARKHA SHARMA</p>
+        </div>
+        <div class="scrolltop float-right">
+          <i class="fa fa-arrow-up" onclick="topfunctio()" id="mybtn"></i>
+    
+
+        </div>
+      </div>
+
+    </footer>
+
+    
 
     <script>
-      $(".count").counterUp({
-        delay: 10,
-        time: 3000,
+      $(document).ready(function(){
+        $('.counter').counterUp({
+          delay: 10,
+          time: 1200
+        });
       });
-    </script>
+      </script>
   </body>
 </html>
